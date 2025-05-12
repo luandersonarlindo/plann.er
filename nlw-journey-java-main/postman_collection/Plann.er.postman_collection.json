@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "101be98b-048b-4663-a4d4-15acc5985ec6",
+		"name": "Plann.er",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40372299"
+	},
+	"item": [
+		{
+			"name": "Criação de Viagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Floriánopolis, SC\",\r\n    \"starts_at\": \"2024-06-25T21:51:54.7442\",\r\n    \"ends_at\": \"2024-07-25T21:51:54.7442\",\r\n    \"emails_to_invite\": [\r\n        \"doninhanada@gmail.com\"\r\n    ],\r\n    \"owner_name\": \"Kirito\",\r\n    \"owner_email\": \"kirito.kill1999@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualização de Viagem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Porto Alegre, RS\",\r\n    \"starts_at\": \"2024-06-25T21:51:54.7442\",\r\n    \"ends_at\": \"2024-07-25T21:51:54.7442\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9"
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera Detalhes da Viagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9"
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar Viagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/confirm"
+			},
+			"response": []
+		},
+		{
+			"name": "Registra Atividade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Visita ao Puteiro\",\r\n    \"occurs_at\":\"2024-07-23T21:51:54.7442\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/activities"
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera Atividades da Viagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/activities"
+			},
+			"response": []
+		},
+		{
+			"name": "Convida Participante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"doninhamascara@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/invite"
+			},
+			"response": []
+		},
+		{
+			"name": "Confirma Participante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Doninha Mascara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/participants/00866234-068e-4071-8268-c34c6d7aeb21/confirm"
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera Participante da Viagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/participants"
+			},
+			"response": []
+		},
+		{
+			"name": "Registra Link",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Link do paletton\",\r\n    \"url\":\"https://paletton.com/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/links"
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera Links da Viagem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trips/153abb3a-d4a1-48e2-8aa7-036af79677b9/links"
+			},
+			"response": []
+		}
+	]
+}
